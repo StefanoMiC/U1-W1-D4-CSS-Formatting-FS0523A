@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Box model tests</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .turquoise {
+            background-color: paleturquoise;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        .coral {
+            background-color: coral;
+            /* questa proprietà fa sì che bordi e padding non aggiungano ingombro totale all'elemento che può rimanere, nel nostro caso di 100x100px */
+            box-sizing: border-box;
+        }
+
+        .gradient {
+            background-image: linear-gradient(333deg, rgba(2, 0, 36, 1) 0%, rgba(228, 0, 4, 1) 32%, rgba(9, 9, 121, 1) 57%, rgba(0, 212, 255, 1) 100%);
+        }
+
+        .no-padding {
+            padding: 0;
+        }
+
+        .coral img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+        }
+
+        .with-bg-image {
+            background-image: url(https://images.unsplash.com/photo-1682685797208-c741d58c2eff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            padding-block: 30px;
+
+            padding-block: 140px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Arial;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        button {
+            background-color: palegreen;
+            border: 2px solid rgb(89, 202, 89)
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box turquoise">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quisquam modi
+        doloremque temporibus, recusandae incidunt esse fuga omnis delectus. Quasi amet aliquam beatae incidunt eius
+        itaque dolorem, debitis quidem repellendus?
+        Iste reiciendis perspiciatis corporis odit ea doloribus in itaque voluptatibus doloremque amet labore debitis,
+        similique nesciunt suscipit dolore odio laudantium atque nisi sint nostrum voluptates numquam quasi? Voluptates,
+        fugiat suscipit?
+        Aliquam expedita aperiam suscipit neque rem beatae reiciendis nisi, laborum quisquam aut quis maiores eos
+        accusamus ex perferendis? Sequi cumque delectus non optio quo, laborum dolor rem illum amet totam.
+        Atque et quam aliquid voluptatum mollitia iure saepe illum accusamus, voluptatibus velit doloremque praesentium
+        laudantium itaque exercitationem cumque reprehenderit similique error ducimus expedita consequatur sit explicabo
+        iste animi. Sit, quis.
+        Iste corrupti labore nam commodi? Molestias fuga, accusantium libero eos aut quisquam architecto tempora,
+        repellat error laborum facilis! Nostrum quod facere deleniti fugit deserunt tenetur aliquam, dolorem ad qui
+        porro?
+        Veniam earum odio quod quo, praesentium officia accusamus illo cum eum omnis voluptate culpa, qui, autem
+        molestiae sit facilis quidem tenetur unde suscipit in dolorem! In qui laboriosam iste quaerat.
+        Reiciendis nam dolorem autem vel nemo officia fuga laudantium tenetur, laborum porro voluptate, aut iste commodi
+        minus facilis rerum tempora fugit odio natus numquam deserunt voluptas. Ipsum rerum facilis minus.
+        Aliquam incidunt animi fuga quaerat iste ducimus alias ex rerum adipisci laboriosam at cumque doloribus sapiente
+        officia eos fugit iure, amet iusto quos ea ipsa aperiam reprehenderit unde voluptatem? Corporis!
+        Error obcaecati quidem sit, numquam, dolore odio ut unde magnam expedita, nobis neque minima optio pariatur
+        architecto possimus illum quod harum impedit ipsa sint? Quod porro expedita deserunt dolor nam!
+        Accusamus veritatis perspiciatis aspernatur. Dignissimos commodi obcaecati, tenetur dolor dolorum ullam quod.
+        Perspiciatis dolore unde fuga quod quam fugiat laudantium repellendus obcaecati labore doloribus deserunt
+        inventore atque illum, architecto maxime?</div>
+    <div class="box gradient">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, odio!</div>
+
+    <div class="box coral no-padding">
+        <img src="https://images.unsplash.com/photo-1682687219573-3fd75f982217?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
+            alt="">
+    </div>
+    <div class="box coral with-bg-image">Canyon</div>
+
+    <p>Lorem ipsum, <span>dolor sit amet</span> consectetur adipisicing elit. Nihil, culpa tempora atque sed excepturi
+        ipsa! Voluptates laboriosam aliquam adipisci alias. Eligendi eum pariatur doloremque optio voluptas dolor dolore
+        placeat natus.<i class="fas fa-wind"></i></p>
+
+    <button><i class="fas fa-sync-alt"></i> Sincronizza</button>
+</body>
+
+</html>
